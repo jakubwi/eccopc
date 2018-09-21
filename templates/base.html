@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/static/favicon.ico">
+
+    <title>{% block title %}{% endblock %} EccoPC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/bootstrap/sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <header>
+          <!-- Fixed navbar -->
+          <div class="container">
+          <nav class="navbar navbar-expand-md navbar-light">
+            
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="/static/logo.png" class="d-inline-block align-top" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <div class="d-inline-flex p-2 bd-highlight">
+                  <a class="nav-link" href="{% url 'products' %}"><h3><span class="border-top border-success">Produkty</span></h3></a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <div class="d-inline-flex p-2 bd-highlight">
+                      <a class="nav-link" href="#">
+                        <h3><span class="border-top border-success">Wsparcie techniczne</span></h3>
+                      </a>
+                    </div>
+                </li>
+                <div class="d-inline-flex p-2 bd-highlight">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h3><span class="border-top border-success">Kontakt</span></h3></a>
+                </li>
+              </div>
+              </ul>
+            </div>
+          
+          </nav>
+        </div>
+        </header>
+    <main role="main" class="container">
+      
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+            {% block content %}
+            {% endblock %}
+
+
+    </main>
+  <br/>
+  <br/>
+     <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/bootstrap/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/static/bootstrap/jquery-slim.min.js"><\/script>')</script>
+    <script src="/static/bootstrap/popper.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>

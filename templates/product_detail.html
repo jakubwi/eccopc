@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ product.name }} |{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="jumbotron">
+
+          <h5><strong>{{ product.name }}</strong></h5>
+          <hr>
+          <img src="{{ MEDIA_URL }}{{ product.picture }}">
+          <br/>
+          {{ product.description }}
+          <br/>
+          {{ product.body }}
+
+ 
+  </div>
+</div>
+
+{% endblock %}  
+  
+
+
+     

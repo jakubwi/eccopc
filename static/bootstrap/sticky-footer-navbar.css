@@ -1,0 +1,50 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /* CUSTOM */
+  background-color: #cfcfcf;
+  background: -moz-radial-gradient(center, ellipse cover, #cfcfcf 0%, #cad3d3 0%, #c0ccce 11%, #c4cecf 11%, #cfcfcf 42%, #cfcfcf 53%, #fcfdfd 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #cfcfcf), color-stop(0%, #cad3d3), color-stop(11%, #c0ccce), color-stop(11%, #c4cecf), color-stop(42%, #cfcfcf), color-stop(53%, #cfcfcf), color-stop(100%, #fcfdfd));
+  background: -webkit-radial-gradient(center, ellipse cover, #cfcfcf 0%, #cad3d3 0%, #c0ccce 11%, #c4cecf 11%, #cfcfcf 42%, #cfcfcf 53%, #fcfdfd 100%);
+  background: -o-radial-gradient(center, ellipse cover, #cfcfcf 0%, #cad3d3 0%, #c0ccce 11%, #c4cecf 11%, #cfcfcf 42%, #cfcfcf 53%, #fcfdfd 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #cfcfcf 0%, #cad3d3 0%, #c0ccce 11%, #c4cecf 11%, #cfcfcf 42%, #cfcfcf 53%, #fcfdfd 100%);
+  background: radial-gradient(ellipse at center, #cfcfcf 0%, #cad3d3 0%, #c0ccce 11%, #c4cecf 11%, #cfcfcf 42%, #cfcfcf 53%, #fcfdfd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfcfcf', endColorstr='#fcfdfd', GradientType=1 );
+}
+  /* CUSTOM */
+.jumbotron {
+  background-color: white;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #000000dc;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
