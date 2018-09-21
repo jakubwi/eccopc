@@ -8,14 +8,16 @@
 
 <div class="container">
     <div class="jumbotron">
-
-          <h5><strong>{{ product.name }}</strong></h5>
-          <hr>
-          <img src="{{ MEDIA_URL }}{{ product.picture }}">
-          <br/>
-          {{ product.description }}
-          <br/>
-          {{ product.body }}
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h2>Kategoria: <strong>{{ category.name }}</strong></h2>
+            </div>
+            <hr>
+    <strong>{{ product.name }}</strong>
+    <hr>
+    <img src="{{ MEDIA_URL }}{{ product.picture }}" style="max-height: 600px; max-width: 600px;" />
+    <p class="text-muted" ><font size="1">Fotografia ma charakter wyłącznie poglądowy.</font></p>       
+    <br/>
+    {{ product.body|safe }}
 
  
   </div>

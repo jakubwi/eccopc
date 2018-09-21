@@ -5,22 +5,32 @@
 
 {% block content %}
 {% if products %}
-
 <div class="container">
     <div class="jumbotron">
-        <h2>{{ category.name }}</h2>
-        <div class="list-group">
-    {% for product in products %}
-    <a href="{% url 'product_detail' category.slug product.slug %}" class="list-group-item list-group-item-action">
-      <strong>{{ product.name }}</strong>
-          <hr>
-          <img src="{{ MEDIA_URL }}{{ product.picture }}" width="20%" height="20%">
-          <p class="text-muted" ><font size="1">Fotografia ma charakter wyłącznie poglądowy.</font></p>
-    </a>
-   
-    {% endfor %}
+        <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2><strong>{{ category.name }}</strong></h2>
+        </div>
+        <hr>
+
+            <div class="list-group">
+            {% for product in products %}
+                <a href="{% url 'product_detail' category.slug product.slug %}" class="list-group-item list-group-item-action">
+                    <strong>{{ product.name }}</strong>
+                    <hr>
+                    <img src="{{ MEDIA_URL }}{{ product.picture }}" style="max-height: 200px; max-width: 200px;">
+                    <p class="text-muted" ><font size="1">Fotografia ma charakter wyłącznie poglądowy.</font></p>
+                </a>
+            {% endfor %}
+            </div>
     </div>
-  </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="jumbotron">
+        <div class="alert alert-danger" role="alert">
+            <strong>Aktualnie nie ma produktów w tej kategorii.</strong>
+        </div>
+    </div>
 </div>
 {% endif %}
 {% endblock %}  

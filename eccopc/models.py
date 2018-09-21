@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.text import slugify
 from django.urls import reverse
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class CustomUser(AbstractUser):
 
@@ -30,8 +31,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=125, unique=True)
     picture = models.ImageField(blank=True, upload_to='products/')
-    description = models.CharField(max_length=255)
-    body = models.TextField()
+    body = RichTextUploadingField()
     slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):

@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd party
+    'ckeditor',
+    'ckeditor_uploader',
     #local
     'eccopc',
 ]
@@ -123,6 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
+
 # dynamic files
 
 MEDIA_ROOT = MEDIA_DIR
@@ -136,3 +140,6 @@ AUTH_USER_MODEL = 'eccopc.CustomUser'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# custom RichTextField / admin html editor - CKEDITOR
+
+CKEDITOR_UPLOAD_PATH = "dokumenty/"
