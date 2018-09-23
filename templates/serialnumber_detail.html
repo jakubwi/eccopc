@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Wsparcie techniczne |{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h2><strong>{{ serialnumber.name }}</strong></h2>
+            <h3>Numer seryjny: <strong>{{ serialnumber.sn }}</strong></h3>
+        </div>
+    <hr>
+    {% if serialnumber.gwarancja %}
+    Gwarancja (miesiące): <b>{{ serialnumber.gwarancja }}</b> <br/>
+    {% endif %}
+    {% if serialnumber.instrukcja %}
+    Instrukcja: <a href="{{ serialnumber.instrukcja.url }}"><span class="text-success">Pobierz</span></a> <br/>
+    {% endif %}
+    {% if serialnumber.podrecznik %}
+    Podręcznik użytkownika: <a href="{{ serialnumber.podrecznik.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    <hr>
+    {% if serialnumber.bios %}
+        BIOS: <a href="{{ serialnumber.bios.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.chipset %}
+        Chipset: <a href="{{ serialnumber.chipset.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.sound %}
+        Karta dźwiękowa: <a href="{{ serialnumber.sound.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.vga %}
+        Karta graficzna: <a href="{{ serialnumber.vga.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.sata %}
+        SATA: <a href="{{ serialnumber.sata.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.lan %}
+        Karta sieciowa: <a href="{{ serialnumber.lan.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.security %}
+        Bezpieczeństwo: <a href="{ serialnumber.security.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.other %}
+        Inne: <a href="{{ serialnumber.other.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.other2 %}
+        Inne: <a href="{{ serialnumber.other2.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+    {% if serialnumber.other3 %}
+        Inne: <a href="{{ serialnumber.other3.url }}"><span class="text-success">Pobierz</span></a><br/>
+    {% endif %}
+
+ 
+  </div>
+</div>
+
+{% endblock %}  
+  
+
+
+     

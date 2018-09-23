@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Wsparcie techniczne |{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h2><strong>Podaj numer seryjny:</strong></h2>
+        </div>
+        <hr>
+            <form method="GET" action="{% url 'search_sn' %}">
+                <div class="form-group">
+                    <input name="q" value="{{request.GET.q}}" placeholder=""><br/>            
+                    <small class="form-text text-muted">Wpisz numer seryjny aby uzyskać dostęp do sterowników/dokumentacji.</small>
+                </div>
+            <button class="btn btn-success" type="submit">Wyszukaj</button>
+            </form>
+
+<ul class="list-group">
+    <br>
+{% for serialnumber in results %}
+<a href="{% url 'serialnumber_detail' serialnumber.pk %}" class="list-group-item list-group-item-action">
+    <strong>{{ serialnumber.sn }}</strong>
+</a>
+{% endfor %}
+</ul>
+     
+    </div>
+</div>
+{% endblock %}  
+  
+
+
+     
