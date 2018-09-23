@@ -8,13 +8,13 @@
 
 <div class="container">
     <div class="jumbotron">
-    <div class="card-columns">
+    <div class="card-deck">
     {% for category in object_list %}
-    <div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card border-success mb-3">
         <div class="card-body text-center">
           <h5 class="card-title"><strong>{{ category.name }}</strong></h5>
           <hr>
-          <p class="card-text"><img src="{{ MEDIA_URL }}{{ category.picture }}"></p>
+          <img class="card-img-bottom" src="{{ MEDIA_URL }}{{ category.picture }}" style="max-height: 200px; max-width: 200px;">
           <p class="text-muted" ><font size="1">Fotografia ma charakter wyłącznie poglądowy.</font></p>
         </div>
         <div class="card-footer">
