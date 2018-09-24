@@ -7,11 +7,11 @@
 {% if object_list %}
 
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron border border-success">
         <div class="shadow p-3 mb-5 bg-white rounded">
         <h2><strong>Nasze produkty:</strong></h2>
         </div>
-    <div class="card-deck">
+ 
     {% for category in object_list %}
     <div class="card border-success mb-3">
         <div class="card-body text-center">
@@ -26,7 +26,7 @@
         
     </div>
     {% endfor %}
-  </div>
+  
   </div>
 </div>
 {% endif %}
